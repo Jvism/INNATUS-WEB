@@ -1,0 +1,74 @@
+@media screen and (max-width: 576px){
+
+    .header{
+        padding: 4vh 6vw 0 4vw;
+    }
+
+    .header .nav-logo{
+        height: 1em;
+        width: 6em;
+    }
+
+    .menu .menu-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--primary-font);
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: .3em;
+    }
+
+    .menu .menu-item:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    
+    .menu .menu-item:nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 5;
+        grid-row-end: 7;
+    }
+    
+    /* proximamente  */
+    
+    .menu .menu-item:nth-child(2) p{
+        color: var(--text-secondary-color);
+        font-size: .5em; 
+    }
+    
+    .menu .menu-item:nth-child(2) a{
+        text-decoration: line-through;
+    }
+    
+    /* --------- */
+    
+    .menu .menu-item:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 8;
+        grid-row-end: 10;
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 992px){
+    
+}
+
+@media screen and (max-width: 1200px){
+    
+}
+
+@media screen and (max-width: 1400px){
+    
+}

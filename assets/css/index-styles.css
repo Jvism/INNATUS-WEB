@@ -1,0 +1,135 @@
+@import 'nav-styles.css';
+
+/* estilos secciones */
+
+.main-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition-delay: .2s;
+}
+
+.grid-fp{
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+}
+
+/* lineas */
+
+.lines{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.line-1{
+    grid-column-start: 2;
+    width: .5px;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    background-color: var(--text-secondary-color);
+    opacity: .3;
+}
+
+.line-2{
+    grid-column-start: 5;
+    width: .5px;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    background-color: var(--text-secondary-color);
+    opacity: .3;
+}
+
+.line-3{
+    grid-column-start: 7;
+    width: .5px;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    background-color: var(--text-secondary-color);
+    opacity: .3;
+}
+
+.line-4{
+    grid-column-start: 10;
+    width: .5px;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    background-color: var(--text-secondary-color);
+    opacity: .3;
+}
+
+/* estilo seccion titulo */
+
+.scroll-icon{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.scroll-icon .scroll{
+    transform: rotate(90deg);
+    font-family: var(--primary-font);
+    font-size: .5em;
+    letter-spacing: .2em;
+    color: var(--text-primary-color);
+    margin-bottom: 3em;
+}
+
+.scroll-icon .line{
+    background-color: var(--text-primary-color);
+    width: 1px;
+    height: 80%;
+    opacity: .8;
+}
+
+.title{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    text-align: end;
+}
+
+.title h1{
+    font-family: var(--primary-font);
+    font-size: 6em;
+    font-weight: 600;
+    color: var(--text-primary-color);
+    line-height: 1em;
+}
+
+.title p{
+    font-family: var(--primary-font);
+    font-size: 2.5em;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-primary-color);
+}
+
+.frame{
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 8;
+    border: solid 3px rgb(226, 196, 147);
+}
+
+.sculture{
+    grid-column-start: 4;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 11;
+    background: url(../img/sculture.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&display=swap');
+
+
+:root{
+
+    /* ----- variables ----- */
+
+    /* Fuentes */
+	--primary-font: "Montserrat", sans-serif;
+	--secondary-font: 'Cormorant', serif;
+
+    /* Colores */
+    --text-primary-color: #ffffff;
+    --text-secondary-color: #888888;
+
+    --bg-primary-gradient: linear-gradient(90deg, rgba(38,38,38,1) 0%, rgba(23,23,23,1) 100%);;
+    --bg-secondary-gradient: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(0,0,5,1) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+    background: var(--bg-primary-gradient);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.fullpage{
+    overflow: hidden;
+}
