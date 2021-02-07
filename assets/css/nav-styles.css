@@ -36,16 +36,17 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 5vh 10vw 0 9.4vw;
+    padding: 5vh 10vw 0 7.5vw;
 }
 
 .header .nav-logo{
     width: auto;
-    height: 1.5em;
-    width: 6.5em;
+    height: 1.4em;
+    width: 5.5em;
     background: url(../img/logo.png);
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .header .menu-button{

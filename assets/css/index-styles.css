@@ -60,7 +60,7 @@
     opacity: .3;
 }
 
-/* estilo seccion titulo */
+/* estilo icono scroll */
 
 .scroll-icon{
     grid-column-start: 1;
@@ -89,6 +89,37 @@
     height: 80%;
     opacity: .8;
 }
+
+/* estilos iconos redes sociales */
+
+.social-icon{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 3;
+    opacity: .8;
+}
+
+.social-icon .icon{
+    font-size: 1em;
+    color: var(--text-primary-color);
+    margin-bottom: .5em;
+}
+
+.social-icon .line{
+    background-color: var(--text-primary-color);
+    width: 1px;
+    height: 80%;
+}
+
+
+/* estilo seccion titulo */
 
 .title{
     grid-column-start: 5;
