@@ -91,16 +91,18 @@
 }
 
 .title{
-    grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 8;
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    margin-top: 2em;
     text-align: end;
+    z-index: 2;
 }
 
 .title h1{
     font-family: var(--primary-font);
-    font-size: 6em;
+    font-size: 2em;
     font-weight: 600;
     color: var(--text-primary-color);
     line-height: 1em;
@@ -108,28 +110,30 @@
 
 .title p{
     font-family: var(--primary-font);
-    font-size: 2.5em;
+    font-size: .8em;
     font-weight: 300;
     font-style: italic;
     color: var(--text-primary-color);
 }
 
 .frame{
-    grid-column-start: 4;
-    grid-column-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 11;
     grid-row-start: 2;
-    grid-row-end: 8;
+    grid-row-end: 10;
     border: solid 3px rgb(226, 196, 147);
+    border-right: none;
 }
 
 .sculture{
-    grid-column-start: 4;
+    grid-column-start: 1;
     grid-column-end: 11;
-    grid-row-start: 2;
+    grid-row-start: 3;
     grid-row-end: 11;
     background: url(../img/sculture.png);
     background-position: bottom;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: 62%;
 }
 
