@@ -13,8 +13,9 @@
     --text-primary-color: #ffffff;
     --text-secondary-color: #888888;
 
-    --bg-primary-gradient: linear-gradient(90deg, rgba(38,38,38,1) 0%, rgba(23,23,23,1) 100%);;
+    --bg-primary-gradient: linear-gradient(90deg, rgba(38,38,38,1) 0%, rgba(23,23,23,1) 100%);
     --bg-secondary-gradient: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(0,0,5,1) 100%);
+    --bg-tertiary-gradient: linear-gradient(90deg, rgb(240, 240, 240) 0%, rgb(210, 210, 210) 100%);
 }
 
 *{
