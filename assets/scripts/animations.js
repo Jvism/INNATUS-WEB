@@ -5,11 +5,18 @@ function animations(){
         window.addEventListener("load" , function (){
 
             let aosLeft = document.querySelectorAll(".aos-left");
+            let aosFadeIn = document.querySelectorAll(".aos-fadein");
 
             aosLeft.forEach(e => {
                 e.classList.remove("aos-left");
                 e.classList.add("aos-view");
             });
+
+            aosFadeIn.forEach(e => {
+                e.classList.remove("aos-fadein");
+                e.classList.add("aos-view");
+            });
+
 
         });
 

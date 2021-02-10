@@ -72,7 +72,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    z-index: 2;
 }
 
 .scroll-icon .scroll{
@@ -159,14 +158,13 @@
 
 .sculture{
     grid-column-start: 1;
-    width: 160vw;
+    grid-column-end: 15;
     grid-row-start: 3;
     grid-row-end: 11;
     background: url(../img/sculture.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 90%;
-    overflow-y: hidden;
+    background-position: 62%;
 }
 

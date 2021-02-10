@@ -8,7 +8,7 @@
     }
 
     .sculture{
-        background-position: -10%;
+        background-position: 70%;
     }
 }
 
@@ -22,8 +22,8 @@
     }
 
     .sculture{
-        width: 100vw;
-        background-position: 120%;
+        grid-column-end: 11;
+        background-position: 80%;
     }
 }
 
@@ -38,9 +38,11 @@
     }
 
     .sculture{
-        width: 90vw;
+        grid-column-start: 1;
+        grid-column-end: 11;
         grid-row-start: 2;
-        background-position: 130%;
+        grid-row-end: 11;
+        background-position: 90%;
     }
 }
 
@@ -69,6 +71,7 @@
         grid-row-end: 8;
         margin-right: 3em;
         border: solid 3px rgb(226, 196, 147);
+        background-position: bottom;
     }
     
     .sculture{
@@ -77,6 +80,7 @@
         grid-row-start: 2;
         grid-row-end: 11;
         background-size: contain;
+        background-position: 0%;
         background-position: bottom;
     }
 }
@@ -90,15 +94,6 @@
     
     .title p{
         font-size: 2em;
-    }
-
-    .sculture{
-        grid-column-start: 3;
-        width: 80vw;
-        grid-row-start: 2;
-        grid-row-end: 11;
-        background-size: contain;
-        background-position: bottom;
     }
 
 }
