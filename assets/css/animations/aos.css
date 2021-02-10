@@ -1,7 +1,4 @@
-.aos-left{
-    transform: translateX(-100%);
-    opacity: 0;
-}
+/* posicion inicial */
 
 .aos-view{
     transition: all 2s;
@@ -9,6 +6,21 @@
     opacity: 1;
 }
 
+/* animaciones con movimiento */
+
+.aos-left{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* animaciones estaticas */
+
 .aos-fadein{
     opacity: 0;
+}
+
+/* traslado background */
+
+.aos-bgX{
+    background-position: 110%;
 }

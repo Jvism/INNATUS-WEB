@@ -6,6 +6,7 @@ function animations(){
 
             let aosLeft = document.querySelectorAll(".aos-left");
             let aosFadeIn = document.querySelectorAll(".aos-fadein");
+            let aosBgX = document.querySelectorAll(".aos-bgX");
 
             aosLeft.forEach(e => {
                 e.classList.remove("aos-left");
@@ -15,6 +16,10 @@ function animations(){
             aosFadeIn.forEach(e => {
                 e.classList.remove("aos-fadein");
                 e.classList.add("aos-view");
+            });
+
+            aosBgX.forEach(e => {
+                e.classList.remove("aos-bgX");
             });
 
 
