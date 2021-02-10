@@ -13,6 +13,11 @@
     opacity: 0;
 }
 
+.aos-top{
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
 /* animaciones estaticas */
 
 .aos-fadein{

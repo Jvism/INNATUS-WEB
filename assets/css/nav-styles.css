@@ -2,17 +2,22 @@
 
 /* Estilos animacion */
 
-.light{
+.dark{
     transition: color .4s;
     color: var(--text-secondary-color);
 }
 
-.dark{
+.x-dark{
+    transition: color .4s;
+    color: var(--text-tertiary-color);
+}
+
+.light{
     transition: color .4s;
     color: var(--text-primary-color);
 }
 
-.logo-ligth{
+.logo-light{
     transition: color .4s;
     opacity: 1;
 }

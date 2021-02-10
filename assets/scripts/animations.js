@@ -5,13 +5,23 @@ function animations(){
         window.addEventListener("load" , function (){
 
             let aosLeft = document.querySelectorAll(".aos-left");
+            let aosTop = document.querySelectorAll(".aos-top");
+
             let aosFadeIn = document.querySelectorAll(".aos-fadein");
             let aosBgX = document.querySelectorAll(".aos-bgX");
+            
 
             aosLeft.forEach(e => {
                 e.classList.remove("aos-left");
                 e.classList.add("aos-view");
             });
+
+            aosTop.forEach(e => {
+                e.classList.remove("aos-top");
+                e.classList.add("aos-view");
+            });
+
+
 
             aosFadeIn.forEach(e => {
                 e.classList.remove("aos-fadein");
@@ -36,6 +46,8 @@ function animations(){
             document.body.setAttribute("style",
                 "background: var(--bg-tertiary-gradient)"
             );
+
+
 
         });
 

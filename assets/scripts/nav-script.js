@@ -5,8 +5,16 @@ const menuPage = document.querySelector(".menu");
 btnMenu.addEventListener("click", () => {
 
     if(btnMenu.classList.contains("close")){
-        btnMenu.classList.remove("close", "dark");
-        btnMenu.classList.add("open", "light");
+
+        if("INICIO" == document.querySelector(".active").textContent){
+            btnMenu.classList.remove("close", "light");
+            btnMenu.classList.add("open", "dark");
+        }
+        
+        if("CONTACTO" == document.querySelector(".active").textContent){1
+            btnMenu.classList.remove("close", "x-dark");
+            btnMenu.classList.add("open", "dark");
+        }
 
         logo.classList.remove("logo-light");
         logo.classList.add("logo-dark");
@@ -16,8 +24,16 @@ btnMenu.addEventListener("click", () => {
     }
 
     else{
-        btnMenu.classList.remove("open", "light");
-        btnMenu.classList.add("close" , "dark");
+
+        if("INICIO" == document.querySelector(".active").textContent){
+            btnMenu.classList.remove("open", "dark");
+            btnMenu.classList.add("close" , "light");
+        }
+        if("CONTACTO" == document.querySelector(".active").textContent){
+
+            btnMenu.classList.remove("open", "dark");
+            btnMenu.classList.add("close", "x-dark");
+        }
 
         logo.classList.remove("logo-dark");
         logo.classList.add("logo-light");
