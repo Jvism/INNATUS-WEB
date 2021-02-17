@@ -48,7 +48,17 @@
     width: auto;
     height: 1.4em;
     width: 5.5em;
-    background: url(../img/logo.png);
+}
+
+.black-logo{
+    background: url(../img/logo-dark.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.white-logo{
+    background: url(../img/logo-light.png);
     background-position: center;
     background-size: cover;
     overflow: hidden;

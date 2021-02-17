@@ -10,12 +10,6 @@
     transition-delay: .2s;
 }
 
-.grid-fp{
-    display: grid;
-    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
-    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
-}
-
 /* lineas */
 
 .lines{
