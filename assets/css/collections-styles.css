@@ -5,13 +5,22 @@ body{
 }
 
 /* header de coleccion */
-
-.header-clt .bg-clt{
+.header-clt .bgs-clt{
     grid-column-start: 1;
     grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end: 4;
-    background: green;
+    overflow: hidden;
+}
+.header-clt .bgs-clt .container-bg-clt{
+    overflow: hidden;
+    position: absolute;
+}
+
+.header-clt .bgs-clt .container-bg-clt .bg-clt{
+    width: 100vw;
+    height: 100vh;
+    background-position: top;    
 }
 
 .header-clt .img-cover{
@@ -20,12 +29,23 @@ body{
     grid-row-start: 3;
     grid-row-end: 7;
     overflow: hidden;
+    z-index: 2;
+    box-shadow: 5px 4px 20px rgba(0, 0, 0, .2);
+}
+
+.header-clt .img-cover .container-img-clt{
+    position: absolute;
+    overflow: hidden;
+}
+
+.header-clt .img-cover .container-img-clt .img-clt{
+    background-position: top;
 }
 
 
 .header-clt .titles-clt{
     grid-column-start: 2;
-    grid-column-end: 8;
+    grid-column-end: 10;
     grid-row-start: 7;
     grid-row-end: 8;
     padding-top: 2em;

@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
 
     const imgCover = document.getElementById("img-cover");
     const titlesClt = document.getElementById("titles-clt");
-    const imgBg = document.getElementById("bg-clt");
+    const imgBg = document.getElementById("bgs-clt");
 
     // asignamos las imagenes iniciales 
 
@@ -10,70 +10,38 @@ window.addEventListener("load", () => {
     let widthImg = imgCover.clientWidth;
 
     let heightImgBg = imgBg.clientHeight;
-    let widthImgBg = imgBg.clientWidth;
 
-    data.collections.forEach( (collection,index) => {
+    data.collections.forEach( collection => {
 
-        if(index == 0){
-            imgBg.innerHTML += `
+        imgBg.innerHTML += `
+                        <div class="container-bg-clt">
                             <div 
-                                class="bg-clt-${collection.id}"
+                                class="bg-clt"
                                 style="background: url(../assets/img/collections/${collection.id}/${collection.collection[collection.imgSelected].url});
-                                width:${widthImgBg}; 
-                                height:${heightImgBg};
-                                background-position: center;
-                                background-size: cover;
-                                position: absolute;")
-                            ></div> `
+                                background-size: cover;")
+                            ></div>
+                        </div> `
 
-            imgCover.innerHTML += `
+        imgCover.innerHTML += `
+                        <div class="container-img-clt">
                             <div 
-                                class="cover-clt"
-                                style="background: url(../assets/img/collections/${collection.id}/${collection.collection[14].url});
-                                background-position: center;
-                                background-size: cover;
-                                position: absolute;")
-                            ></div> `
-    
-            titlesClt.innerHTML += `
-                            <div class="title-clt ">
-                                <h2>${collection.name}
-                                    <span id="year" class="year">${collection.year}</span>
-                                </h2>
-                            </div>`
-        }else{
-            imgBg.innerHTML += `
-                            <div 
-                                class="bg-clt-${collection.id}"
-                                style="background: url(../assets/img/collections/${collection.id}/${collection.collection[collection.imgSelected].url});
-                                width:0; 
-                                height:${heightImgBg};
-                                background-position: center;
-                                background-size: cover;
-                                position: absolute;")
-                            ></div> `
+                                class="img-clt"
+                                style="background: url(../assets/img/collections/${collection.id}/${collection.collection[2].url});
+                                width:${widthImg}; 
+                                height:${heightImg};
+                                background-size: cover;")
+                            ></div>
+                        </div>  `
 
-            imgCover.innerHTML += `
-                            <div 
-                                class="cover-clt" 
-                                style="background: url(../assets/img/collections/${collection.id}/${collection.collection[0].url});
-                                background-position: center;
-                                background-size: cover;
-                                position: absolute;")
-                            ></div> `
-    
-            titlesClt.innerHTML += `
-                            <div class="title-clt">
-                                <h2 style="opacity: 1;">${collection.name}
-                                    <span id="year" class="year">${collection.year}</span>
-                                </h2>
-                            </div>`
-                            
-        }
-        
+        titlesClt.innerHTML += `
+                        <div class="title-clt ">
+                            <h2>${collection.name}
+                                <span id="year" class="year">${collection.year}</span>
+                            </h2>
+                        </div>`        
     });
 
-    animationSelectCollection(0);
+    animationSelectCollection(0,-1);
 
     let openClt = false;
     let canScroll = true;
@@ -100,7 +68,7 @@ window.addEventListener("load", () => {
 
     function setScroll(direction){
 
-        if( canScroll){
+        if(canScroll){
 
             canScroll = false;
 
@@ -120,18 +88,21 @@ window.addEventListener("load", () => {
                 }
             }
 
-            animationSelectCollection(selectCollection);
+            setTimeout(function(){
+                canScroll = true;
+            }, 1000);
+
+            console.log(1)
+            animationSelectCollection(selectCollection,direction);
         }
 
-        setTimeout(function(){
-            canScroll = true;
-        }, 850);
     }
 
-    function animationSelectCollection(collection){
+    function animationSelectCollection(collection,direction){
 
-        let contTitleClt = document.querySelectorAll(".title-clt");
-        let imgCover = document.querySelectorAll(".cover-clt");
+        const contTitleClt = document.querySelectorAll(".title-clt");
+        const imgClt = document.querySelectorAll(".container-img-clt");
+        const bgClt = document.querySelectorAll(".container-bg-clt")
 
         contTitleClt.forEach( (element,index) => {
             
@@ -143,21 +114,23 @@ window.addEventListener("load", () => {
             }
         })
 
-        imgCover.forEach( (element,index) => {
+        imgClt.forEach( (element,index) => {
             
             if(index == collection){
-                element.setAttribute("style",`height:0; width:${widthImg}; transition: all .9s ease;
-                                background: url(../assets/img/collections/${data.collections[index].id}/${data.collections[index].collection[2].url});
-                                background-position: top;
-                                background-size: 50%;
-                                position: absolute;`);
+                element.setAttribute("style",`height: ${heightImg}; width:${widthImg}; transition: all .5s ease; z-index: 1;`);
             }
             else{
-                element.setAttribute("style",`height: ${heightImg}; width:${widthImg};
-                                background: url(../assets/img/collections/${data.collections[index].id}/${data.collections[index].collection[2].url});
-                                background-position: top;
-                                background-size: cover;
-                                position: absolute;`);
+                element.setAttribute("style",`height: 0; width:${widthImg}; transition-delay: 1s;`);
+            }
+        })
+
+        bgClt.forEach( (element,index) => {
+            
+            if(index == collection){
+                element.setAttribute("style",`height:${heightImgBg}; width: 100vw; transition: all .5s ease; z-index: 1;`);
+            }
+            else{
+                element.setAttribute("style",`height:${heightImgBg}; width: 0; transition-delay: 1s;`);
             }
         })
     }
