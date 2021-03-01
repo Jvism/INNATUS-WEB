@@ -33,6 +33,7 @@
 body{
     font-size: 20px;
     background: var(--bg-primary-gradient);
+    overflow-x: hidden;
 }
 
 a{

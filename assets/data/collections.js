@@ -52,7 +52,7 @@ const data = {
             "id":"3",
             "name":"Acuarelas",
             "author":"Muffasa",
-            "description":"asdasd",
+            "description":"Muffasa crea un lenguaje en la expresión que nace de los sentidos, explorando los detalles propios, reflejados en la  acuarela, sus formas, el despliegue mágico de los colores.",
             "year":"2021",
             "imgSelected":6,
             "collection":[

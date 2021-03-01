@@ -5,9 +5,9 @@ window.addEventListener("load", () => {
     const imgCover = document.getElementById("img-cover");
     const titlesClt = document.getElementById("titles-clt");
     const imgBg = document.getElementById("bgs-clt");
-    const navClt = document.getElementById("nav-clt");
+    const contentClt = document.getElementById("content-clt");
 
-    // asignamos las imagenes iniciales 
+    // asignamos las propiedades iniciales 
 
     let heightImg = imgCover.clientHeight;
     let widthImg = imgCover.clientWidth;
@@ -43,6 +43,13 @@ window.addEventListener("load", () => {
                                 <span id="year" class="year">${collection.year}</span>
                             </h2>
                         </div>`    
+
+        contentClt.innerHTML += `
+                            <div class="description-clt">
+                                <p>${collection.description}</p>
+                            </div>
+                            `
+        
     });
 
     animationSelectCollection(0,10);
@@ -72,7 +79,7 @@ window.addEventListener("load", () => {
 
     function setScroll(direction){
 
-        if(canScroll){
+        if(canScroll && !openClt){
 
             canScroll = false;
 
@@ -93,7 +100,10 @@ window.addEventListener("load", () => {
             }
 
             setTimeout(function(){
-                canScroll = true;
+
+
+                    canScroll = true;
+
             }, 1000);
 
             animationSelectCollection(selectCollection,direction);
@@ -150,6 +160,31 @@ window.addEventListener("load", () => {
         }
         
     }
+
+
+
+    // coleccion abierta 
+
+    const discover = document.getElementById("discover-button");
+    const containerClt = document.getElementById("container-clt");
+    const descriptionClt = document.querySelectorAll(".description-clt")
+
+    discover.addEventListener("click", () => {
+
+        openClt = true;
+
+        containerClt.setAttribute("style", "height: 200vh;");
+        discover.setAttribute("style", "transform: translateY(-100%); opacity: 0; transition: all .5s ease;")
+
+        descriptionClt.forEach( (e,index) => {
+
+            console.log(index , selectCollection)
+            if(index == selectCollection){
+                e.setAttribute("style","transform: translateY(0); opacity: 1; transition-delay: .5s;")
+            }
+        })
+
+    })
 
 
 });
