@@ -17,9 +17,6 @@
 			href="assets/css/mediaqueries/media-query-index.css"
 		/>
 
-		<!-- Estilos animacion -->
-		<link rel="stylesheet" href="assets/css/animations/aos.css" />
-
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -38,7 +35,7 @@
 	</head>
 	<body class="fullpage">
 		<!-- header nav -->
-		<header class="header aos-top">
+		<header id="navbar" class="header">
 			<a href="index.html" class="nav-logo white-logo logo-light" id="logo"></a>
 			<div class="menu-button">
 				<div class="menu-button-inside">
@@ -56,9 +53,7 @@
 						<a href="index.html" class="active">INICIO</a>
 					</li>
 					<li class="menu-item">
-						<a href="#">COLECCIONES</a>
-						<!-- <a href="content/collections.html">COLECCIONES</a> -->
-						<p>proximamente</p>
+						<a href="content/collections.html">COLECCIONES</a>
 					</li>
 					<li class="menu-item">
 						<a href="content/contact.html">CONTACTO</a>
@@ -86,32 +81,40 @@
 		<main class="main-content">
 			<section class="grid-fp section">
 				<div class="scroll-icon">
-					<p class="scroll">SCROLL</p>
-					<div class="line"></div>
+					<p id="icon-scroll" class="scroll">SCROLL</p>
+					<div id="line-header" class="line"></div>
 				</div>
 
 				<div class="social-icon">
 					<a
+						id="icon-instagram"
 						class="icon"
 						href="https://www.instagram.com/innatus.design/"
 						><i class="fab fa-instagram"></i
 					></a>
-					<div class="line"></div>
+					<div id="line-header" class="line"></div>
 				</div>
 
 				<div class="frame"></div>
 
-				<div class="title aos-left">
+				<div id="title-header" class="title">
 					<h1>MUY PRONTO</h1>
 					<p>Un nuevo concepto</p>
 				</div>
 
-				<div class="sculture aos-fadein aos-bgX"></div>
+				<div id="sculture" class="sculture"></div>
+			</section>
+			<section class="grid-fp section collections">
+				<div id="title-collections" class="title ">
+					<h2>MUY PRONTO</h2>
+					<p>Un nuevo concepto</p>
+				</div>
+
 			</section>
 		</main>
 
 		<script src="assets/scripts/nav-script.js"></script>
-		<script src="assets/scripts/fullpage.js"></script>
 		<script src="assets/scripts/animations.js"></script>
+		<script src="assets/scripts/fullpage.js"></script>
 	</body>
 </html>

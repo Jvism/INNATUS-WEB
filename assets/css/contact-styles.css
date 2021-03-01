@@ -1,5 +1,9 @@
 @import 'nav-styles.css';
 
+body{
+    background: var(--bg-tertiary-gradient);
+}
+
 .text-contact{
     grid-column-start: 2;
     grid-column-end: 10;

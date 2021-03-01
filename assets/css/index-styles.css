@@ -8,6 +8,7 @@
 	left: 0;
 	transition: all 1000ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     transition-delay: .2s;
+    overflow: hidden;
 }
 
 /* lineas */
@@ -70,19 +71,22 @@
 }
 
 .scroll-icon .scroll{
-    transform: rotate(90deg);
+    transform: rotate(90deg) translateX(-200%);
     font-family: var(--primary-font);
     font-size: .5em;
     letter-spacing: .2em;
     color: var(--text-primary-color);
     margin-bottom: 3em;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .scroll-icon .line{
     background-color: var(--text-primary-color);
     width: 1px;
-    height: 80%;
+    height: 0%;
     opacity: .8;
+    transition: all 1s ease;
 }
 
 /* estilos iconos redes sociales */
@@ -98,19 +102,23 @@
     justify-content: flex-end;
     align-items: center;
     z-index: 3;
-    opacity: .8;
 }
 
 .social-icon .icon{
     font-size: 1em;
     color: var(--text-primary-color);
     margin-bottom: .5em;
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: all 1s ease;
 }
 
 .social-icon .line{
     background-color: var(--text-primary-color);
     width: 1px;
-    height: 80%;
+    height: 0%;
+    opacity: .8;
+    transition: all 1s ease;
 }
 
 
@@ -124,6 +132,9 @@
     margin-top: 2em;
     text-align: end;
     z-index: 2;
+    /* transform: translateX(100%); */
+    /* opacity: 0; */
+    transition: all 1.2s ease;
 }
 
 .title h1{
@@ -160,6 +171,8 @@
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 62%;
+    background-position: 160%;
+    opacity: 0;
+    transition: all 1.2s ease;
 }
 

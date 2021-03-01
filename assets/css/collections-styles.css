@@ -1,0 +1,57 @@
+@import 'nav-styles.css';
+
+body{
+    background: var(--bg-tertiary-gradient);
+}
+
+/* header de coleccion */
+
+.header-clt .bg-clt{
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: green;
+}
+
+.header-clt .img-cover{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 7;
+    overflow: hidden;
+}
+
+
+.header-clt .titles-clt{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    padding-top: 2em;
+    font-family: var(--secondary-font);
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+}
+
+.header-clt .titles-clt .title-clt{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+
+.header-clt .titles-clt .title-clt h2{
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.header-clt .titles-clt .title-clt h2 .year{
+    font-size: .4em;
+    margin-left: 1em;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    color: var(--text-secondary-color);
+}
