@@ -1,7 +1,7 @@
 @import 'nav-styles.css';
 
 body{
-    background: var(--bg-tertiary-gradient);
+    background: #ffff;
 }
 
 /* header de coleccion */
@@ -39,7 +39,7 @@ body{
 }
 
 .header-clt .img-cover .container-img-clt .img-clt{
-    background-position: top;
+    background-position: center;
 }
 
 
@@ -66,6 +66,7 @@ body{
 .header-clt .titles-clt .title-clt h2{
     font-weight: 300;
     font-size: 1.8em;
+    color: var(--text-tertiary-color);
 }
 
 .header-clt .titles-clt .title-clt h2 .year{
@@ -74,4 +75,88 @@ body{
     font-weight: 400;
     font-family: var(--primary-font);
     color: var(--text-secondary-color);
+}
+
+/* estilos nav lateral */
+
+.header-clt .nav-clt{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-clt .arrow {
+	height: 7px; 
+    width: 7px;
+	border: 1px solid var(--text-tertiary-color);
+	border-width: 2px 2px 0 0;
+    cursor: pointer;
+}
+
+.nav-clt .arrow:first-child{
+	transform: rotate(-45deg);
+    margin-bottom: .3em;
+}
+
+.nav-clt .arrow:last-child{
+	transform: rotate(135deg);
+    margin-top: .3em;
+}
+
+.nav-clt .number{
+    transform: rotate(-90deg);
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: .6em;
+}
+
+.nav-clt .line-navClt{
+    height: 10px;
+    width: 1px;
+    margin-top: .3em;
+    margin-bottom: .2em;
+    background: var(--text-tertiary-color);
+}
+
+/* estilos boton colleccion */
+
+.header-clt .button-clt{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 9;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-clt .title-button{
+    font-family: var(--primary-font);
+    font-size: .7em;
+    font-weight: 700;
+    color: var(--text-tertiary-color);
+}
+
+.button-clt .line-button{
+    margin-top: .2em;
+    height: 1.5px;
+    width: 3.2em;
+    background: var(--text-tertiary-color);
+}
+
+.button-clt:hover .line-button{
+    animation-duration: 1s;
+    animation-name: animation-line;
+}
+
+
+@keyframes animation-line {
+    0% { width: 3.2em;}
+    50% {width: 0;}
+    100% {width: 3.2em}
 }

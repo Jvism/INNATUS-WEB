@@ -6,7 +6,7 @@ const data = {
             "author":"Innatus",
             "description":"asdasd",
             "year":"2018",
-            "imgSelected":6,
+            "imgSelected":14,
             "collection":[
                 {"url":"1.jpg"},
                 {"url":"2.jpg"},
@@ -36,7 +36,7 @@ const data = {
             "author":"Innatus",
             "description":"asdasd",
             "year":"2019",
-            "imgSelected":4,
+            "imgSelected":5,
             "collection":[
                 {"url":"21.jpg"},
                 {"url":"22.jpg"},
@@ -54,7 +54,7 @@ const data = {
             "author":"Muffasa",
             "description":"asdasd",
             "year":"2021",
-            "imgSelected":4,
+            "imgSelected":6,
             "collection":[
                 {"url":"29.jpg"},
                 {"url":"30.jpg"},
@@ -63,7 +63,11 @@ const data = {
                 {"url":"33.jpg"},
                 {"url":"34.jpg"},
                 {"url":"35.jpg"},
-                {"url":"36.jpg"}
+                {"url":"36.jpg"},
+                {"url":"37.jpg"},
+                {"url":"38.jpg"},
+                {"url":"39.jpg"},
+                {"url":"40.jpg"}
             ]
         }
 ]}

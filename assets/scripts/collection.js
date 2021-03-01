@@ -1,8 +1,11 @@
+
+
 window.addEventListener("load", () => {
 
     const imgCover = document.getElementById("img-cover");
     const titlesClt = document.getElementById("titles-clt");
     const imgBg = document.getElementById("bgs-clt");
+    const navClt = document.getElementById("nav-clt");
 
     // asignamos las imagenes iniciales 
 
@@ -26,10 +29,11 @@ window.addEventListener("load", () => {
                         <div class="container-img-clt">
                             <div 
                                 class="img-clt"
-                                style="background: url(../assets/img/collections/${collection.id}/${collection.collection[2].url});
+                                style="background: url(../assets/img/collections/${collection.id}/${collection.collection[collection.imgSelected].url});
                                 width:${widthImg}; 
                                 height:${heightImg};
-                                background-size: cover;")
+                                background-size: cover; 
+                                background-position: right;")
                             ></div>
                         </div>  `
 
@@ -38,10 +42,10 @@ window.addEventListener("load", () => {
                             <h2>${collection.name}
                                 <span id="year" class="year">${collection.year}</span>
                             </h2>
-                        </div>`        
+                        </div>`    
     });
 
-    animationSelectCollection(0,-1);
+    animationSelectCollection(0,10);
 
     let openClt = false;
     let canScroll = true;
@@ -92,7 +96,6 @@ window.addEventListener("load", () => {
                 canScroll = true;
             }, 1000);
 
-            console.log(1)
             animationSelectCollection(selectCollection,direction);
         }
 
@@ -103,6 +106,8 @@ window.addEventListener("load", () => {
         const contTitleClt = document.querySelectorAll(".title-clt");
         const imgClt = document.querySelectorAll(".container-img-clt");
         const bgClt = document.querySelectorAll(".container-bg-clt")
+        const nextClt = document.getElementById("nextClt");
+        const selectedClt = document.getElementById("selectedClt");
 
         contTitleClt.forEach( (element,index) => {
             
@@ -133,6 +138,17 @@ window.addEventListener("load", () => {
                 element.setAttribute("style",`height:${heightImgBg}; width: 0; transition-delay: 1s;`);
             }
         })
+
+
+        selectedClt.textContent = `0${collection + 1}`;
+
+        if(collection == data.collections.length - 1){
+            nextClt.textContent = `01`;
+        }
+        else{
+            nextClt.textContent = `0${collection + 2}`;
+        }
+        
     }
 
 
