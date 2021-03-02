@@ -76,11 +76,34 @@ body{
 }
 
 .header-clt .titles-clt .title-clt h2 .year{
-    font-size: .4em;
+    font-size: .8rem;
     margin-left: 1em;
     font-weight: 400;
     font-family: var(--primary-font);
     color: var(--text-secondary-color);
+}
+
+/* estilos autor coleccion */
+
+.header-clt .author-clt{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-clt .author-clt .title-author{
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    color: var(--text-secondary-color);
+}
+
+.header-clt .author-clt .name-author{
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    margin-top: .2em;
+    color: var(--text-tertiary-color);
 }
 
 /* estilos nav lateral */
@@ -129,22 +152,52 @@ body{
     background: var(--text-tertiary-color);
 }
 
+/* estilos scroll */
+
+.header-clt .scroll{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 7;
+    grid-row-end: 11;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-clt .scroll .title-scroll{
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    font-size: .6em;
+    font-weight: 700;
+    margin-bottom: 3em;
+}
+
+.header-clt .scroll .line-scroll{
+    width: 1px;
+    height: 11em;
+    background: var(--text-tertiary-color);
+    transition: all .5s ease-in;
+}
+
 /* estilos boton colleccion */
 
 .header-clt .button-clt{
     grid-column-start: 2;
     grid-column-end: 6;
-    grid-row-start: 9;
+    grid-row-start: 10;
     height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 3;
 }
 
 .button-clt .title-button{
+    font-size: .8rem;
+    font-weight: 600;
     font-family: var(--primary-font);
-    font-size: .7em;
-    font-weight: 700;
     color: var(--text-tertiary-color);
 }
 
@@ -160,7 +213,6 @@ body{
     animation-name: animation-line;
 }
 
-
 @keyframes animation-line {
     0% { width: 3.2em;}
     50% {width: 0;}
@@ -172,9 +224,9 @@ body{
 .header-clt .content-clt{
     grid-column-start: 2;
     grid-column-end: 9;
-    grid-row-start: 8;
+    grid-row-start: 9;
     grid-row-end: 11;
-    padding-top: 2em;
+    padding-top: 1em;
     font-family: var(--primary-font);
     display: grid;
     grid-template-rows: 100%;

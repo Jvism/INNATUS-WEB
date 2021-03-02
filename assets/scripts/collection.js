@@ -42,6 +42,10 @@ window.addEventListener("load", () => {
                             <h2>${collection.name}
                                 <span id="year" class="year">${collection.year}</span>
                             </h2>
+                            <div class="author-clt">
+                                <span class="title-author">autor</span>
+                                <span class="name-author">${collection.author}</span>
+                            </div>
                         </div>`    
 
         contentClt.innerHTML += `
