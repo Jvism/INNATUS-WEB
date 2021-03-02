@@ -9,6 +9,10 @@ body{
     overflow: hidden;
 }
 
+.header{
+    position: absolute;
+}
+
 /* header de coleccion */
 .header-clt .bgs-clt{
     grid-column-start: 1;
@@ -179,6 +183,32 @@ body{
     height: 11em;
     background: var(--text-tertiary-color);
     transition: all .5s ease-in;
+}
+
+/* estilos boton volver */
+
+.header-clt .button-return{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--text-tertiary-color);
+    transform: translateX(150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .8s ease;
+    z-index: 2;
+}
+
+.header-clt .button-return .title-return{
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    font-size: .6em;
+    font-weight: 700;
 }
 
 /* estilos boton colleccion */

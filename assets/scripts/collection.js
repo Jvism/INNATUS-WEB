@@ -1,5 +1,3 @@
-
-
 window.addEventListener("load", () => {
 
     const imgCover = document.getElementById("img-cover");
@@ -14,7 +12,7 @@ window.addEventListener("load", () => {
 
     let heightImgBg = imgBg.clientHeight;
 
-    data.collections.forEach( collection => {
+    data.collections.forEach( async collection => {
 
         imgBg.innerHTML += `
                         <div class="container-bg-clt">
@@ -53,11 +51,11 @@ window.addEventListener("load", () => {
                                 <p>${collection.description}</p>
                             </div>
                             `
+
+        await animationSelectCollection(0,10);
         
     });
-
-    animationSelectCollection(0,10);
-
+    
     let openClt = false;
     let canScroll = true;
     let selectCollection = 0;
@@ -172,6 +170,8 @@ window.addEventListener("load", () => {
     const discover = document.getElementById("discover-button");
     const containerClt = document.getElementById("container-clt");
     const descriptionClt = document.querySelectorAll(".description-clt")
+    const scrollLine = document.querySelector(".line-scroll");
+    const buttonReturn = document.querySelector(".button-return");
 
     discover.addEventListener("click", () => {
 
@@ -188,7 +188,29 @@ window.addEventListener("load", () => {
             }
         })
 
+        scrollLine.setAttribute("style","height: 3em;")
+        buttonReturn.setAttribute("style","transform: translateX(0%); opacity: 1; pointer-events: visible;")
     })
 
 
+    buttonReturn.addEventListener("click", () => {
+
+        openClt = false;
+
+        containerClt.setAttribute("style", "height: 100vh;");
+        discover.setAttribute("style", "transform: translateY(0%); opacity: 1; transition: all .5s ease; transition-delay: .5s;")
+
+        descriptionClt.forEach( (e,index) => {
+
+            console.log(index , selectCollection)
+            if(index == selectCollection){
+                e.setAttribute("style","transform: translateY(30%); opacity: 0;")
+            }
+        })
+
+        scrollLine.setAttribute("style","height: 11em;")
+        buttonReturn.setAttribute("style","transform: translateX(150%); opacity: 0; pointer-events: none;")
+    })
+
 });
+
