@@ -176,3 +176,86 @@
     transition: all 1.2s ease;
 }
 
+/* estilos seccion de coleccion */
+
+.collections .content-last-collection{
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-top: 1em;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all .6s ease;
+}
+
+.collections .content-last-collection .last-collection{
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    color: var(--text-secondary-color);
+}
+
+.collections .content-last-collection .title-last-collection{
+    font-weight: 300;
+    font-size: 1.8em;
+    color: var(--text-primary-color);
+    font-family: var(--secondary-font);
+}
+
+.collections .frame-collection{
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 3;
+    grid-row-end: 9;
+    border: solid 3px rgb(226, 196, 147);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.img-last-collection{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all .8s ease;
+}
+
+/* boton descubrir */
+
+.button-discover{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.button-discover .title-button{
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+    color: var(--text-primary-color);
+}
+
+.button-discover .line-button{
+    margin-top: .2em;
+    height: 1.5px;
+    width: 3.2em;
+    background: var(--text-primary-color);
+}
+
+.button-discover:hover .line-button{
+    animation-duration: 1s;
+    animation-name: animation-line;
+}
+
+@keyframes animation-line {
+    0% { width: 3.2em;}
+    50% {width: 0;}
+    100% {width: 3.2em}
+}
