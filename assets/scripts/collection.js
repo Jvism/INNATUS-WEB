@@ -163,8 +163,6 @@ window.addEventListener("load", () => {
         
     }
 
-
-
     // coleccion abierta 
 
     const discover = document.getElementById("discover-button");
@@ -175,6 +173,8 @@ window.addEventListener("load", () => {
 
     discover.addEventListener("click", () => {
 
+        carousel(selectCollection,false);
+
         openClt = true;
 
         containerClt.setAttribute("style", "height: 200vh;");
@@ -182,7 +182,6 @@ window.addEventListener("load", () => {
 
         descriptionClt.forEach( (e,index) => {
 
-            console.log(index , selectCollection)
             if(index == selectCollection){
                 e.setAttribute("style","transform: translateY(0); opacity: 1; transition-delay: .5s;")
             }
@@ -195,6 +194,8 @@ window.addEventListener("load", () => {
 
     buttonReturn.addEventListener("click", () => {
 
+        carousel(selectCollection,true);
+        
         openClt = false;
 
         containerClt.setAttribute("style", "height: 100vh;");
@@ -202,7 +203,6 @@ window.addEventListener("load", () => {
 
         descriptionClt.forEach( (e,index) => {
 
-            console.log(index , selectCollection)
             if(index == selectCollection){
                 e.setAttribute("style","transform: translateY(30%); opacity: 0;")
             }

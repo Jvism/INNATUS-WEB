@@ -280,7 +280,94 @@ body{
     color: var(--text-tertiary-color);
 }
 
-/* carrousel estilos  */
+/* carrusel estilos  */
 
-.carrousel-clt{
+.container-carousel{
+    /* background: gray; */
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 9;
+}
+
+/* estilos carrusel */
+
+.list-carousel {
+    height: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.list-carousel li {
+    list-style-type: none;
+
+    width: 220px;
+    height: 220px;
+    opacity: .25;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    border-radius: 2px;
+    background: #9C89B8;
+    transition: transform 1s, opacity 1s;
+}
+
+.list-carousel .act {
+    opacity: 1; 
+}
+
+.list-carousel .prev,
+.list-carousel .next {
+    cursor: pointer;
+}
+
+.list-carousel .prev {
+    transform: translateX(-220px) scale(.85);
+}
+
+.list-carousel .next {
+    transform: translateX(220px) scale(.85);
+}
+
+.list-carousel .hide {
+    transform: translateX(-420px) scale(.85);
+}
+
+.list-carousel .new-next {
+    transform: translateX(420px) scale(.85);
+}
+
+.list-carousel .hide,
+.list-carousel .new-next {
+    opacity: 0;
+    transition: opacity .5s, transform .5s;
+}
+
+.buttons-carousel {
+    width: 100vw;
+    height: 190px;
+    position: relative;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-150%);
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-carousel .next-button{
+    width: 15%;
+    height: 100%;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.buttons-carousel .prev-button{
+    width: 15%;
+    height: 100%;
+    border-radius: 2px;
+    opacity: 1;
 }
