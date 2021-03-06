@@ -53,7 +53,8 @@ $('.next-button').addEventListener('click', () => {
     let img = data.collections[collectionSelected].collection[nextImg].url;
     let urlImg = `../assets/img/collections/${collectionSelected + 1}/${img}`;
 
-    $(".new-next").setAttribute("style",`background: url(${urlImg});`);
+    $(".new-next").setAttribute("style",`background: url(${urlImg});background-position: center;
+    background-size: contain;background-repeat: no-repeat;`);
 });
 
 $('.prev-button').addEventListener('click', () => {
@@ -101,7 +102,8 @@ $('.prev-button').addEventListener('click', () => {
     let img = data.collections[collectionSelected].collection[prevImg].url;
     let urlImg = `../assets/img/collections/${collectionSelected + 1}/${img}`;
 
-    $(".hide").setAttribute("style",`background: url(${urlImg});`);
+    $(".hide").setAttribute("style",`background: url(${urlImg});background-position: center;
+    background-size: contain;background-repeat: no-repeat;`);
 });
 
 // funcion para instanciar imagenes
@@ -130,7 +132,8 @@ async function carousel(collection){
         let img = data.collections[collection].collection[positionImg].url;
         let urlImg = `../assets/img/collections/${collection + 1}/${img}`;
 
-        element.setAttribute("style",`background: url(${urlImg});`);
+        element.setAttribute("style",`background: url(${urlImg});background-position: center;
+        background-size: contain;background-repeat: no-repeat;`);
 
         positionImg += 1;
     })

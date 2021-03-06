@@ -5,9 +5,16 @@ body{
 }
 
 .collection{
-    height: 100vh;
     overflow: hidden;
     transition: all .8s ease;
+}
+
+.closeClt{
+    height: 100vh ;
+}
+
+.openClt{
+    height: 150vh ;
 }
 
 .header{
@@ -281,13 +288,14 @@ body{
 }
 
 /* carrusel estilos  */
+.second-section{
+    height: 50vh;
+    width: 100vw;
+}
 
 .container-carousel{
-    /* background: gray; */
-    grid-column-start: 1;
-    grid-column-end: 11;
-    grid-row-start: 3;
-    grid-row-end: 9;
+    width: 100%;
+    height: 100%;
 }
 
 /* estilos carrusel */

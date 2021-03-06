@@ -177,7 +177,7 @@ window.addEventListener("load", () => {
 
         openClt = true;
 
-        containerClt.setAttribute("style", "height: 200vh;");
+        containerClt.classList.replace("closeClt","openClt");
         discover.setAttribute("style", "transform: translateY(-100%); opacity: 0; transition: all .5s ease;")
 
         descriptionClt.forEach( (e,index) => {
@@ -198,7 +198,7 @@ window.addEventListener("load", () => {
         
         openClt = false;
 
-        containerClt.setAttribute("style", "height: 100vh;");
+        containerClt.classList.replace("openClt","closeClt");
         discover.setAttribute("style", "transform: translateY(0%); opacity: 1; transition: all .5s ease; transition-delay: .5s;")
 
         descriptionClt.forEach( (e,index) => {
